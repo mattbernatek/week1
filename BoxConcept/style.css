@@ -1,0 +1,23 @@
+.box, .boxy, .boxette {
+       width: 600px;
+       height: 400px;
+}
+
+.box {
+    padding: 25px;
+    border: solid 2px black;
+    margin: 25px;
+}
+
+.boxy {
+    padding: 45px;
+    border: dotted 3px black;
+    margin: 10px;
+}
+
+.boxette {
+    padding: 30px;
+    border: groove 4px steelblue;
+    margin: 8px;
+    text-align: center;
+}

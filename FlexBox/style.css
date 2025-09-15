@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+    background-color: lightgrey;
+}
+
+.box {
+    display: flex;
+    border: solid 1px black;
+    width: 100px;
+    height: 100px;
+    padding: 15px;
+    background: rgb(131, 146, 219);
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.box h2 {
+    text-align: center;
+}

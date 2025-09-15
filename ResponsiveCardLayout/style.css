@@ -1,0 +1,50 @@
+.card1, .card2, .card3 {
+    width: 400px;
+    background-color: steelblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 10px;
+}
+
+.card1 {
+    padding: 10px;
+    border: solid 2px black;
+    margin: 15px;
+}
+
+.card2 {
+    padding: 15px;
+    border: dotted 2px black;
+}
+
+.card3 {
+    padding: 8px;
+    border: double 3px black;
+}
+
+.cardcontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .cardcontainer {
+        flex-direction: column;
+    }
+    .card2 {
+        background-color: pink;
+    }
+
+    .card1 {
+        background-color: green;
+    }
+
+    .card3 {
+        background-color: aliceblue;
+    }
+
+    .card1, .card2, .card3 {
+        width: 90%;
+    }
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cardcontainer">
+        <div class="card1">
+            <h2>Card 1</h2>
+            <p>This is a practice. Be kind.</p>
+            <button><a href="#" target="_blank">Click me to go nowhere</a></button>
+        </div>
+        <div class="card2">
+            <h2>Card 2</h2>
+            <p>Still learning things.</p>
+            <button><a href="#" target="_blank">Click me to go nowhere</a></button>
+        </div>
+        <div class="card3">
+            <h2>Card 3</h2>
+            <p>Hopefully, getting somewhere</p>
+            <button><a href="#" target="_blank">Click me to go nowhere</a></button>
+        </div>
+    </div>
+</body>
+</body>
+</html>

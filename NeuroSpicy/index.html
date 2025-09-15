@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Neurospicy Retreats</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.png" type="image/png"/>
+</head>
+<body>
+  <!-- Hero Image Section -->
+  <img src="Neurospicy Retreats.jpeg" alt="Meditating Pepper"/>
+
+  <div class="container">
+    <!-- Scroll Hint -->
+    <div class="scroll-hint">
+      ↓ Scroll to sign up
+    </div>
+
+    <!-- Headline Section -->
+    <h1>How to relate, create and self-regulate</h1>
+    <h3>A meditation retreat for neurodivergent humans</h3>
+
+    <!-- Intro Section -->
+    <section class="intro">
+      <p>Hey friends!</p>
+
+      <p>
+        My name is Jeff Warren. I'm an ADHD and bipolar meditation teacher and writer, author of a couple books, in a couple meditation apps - Calm, Happier - as well as Substack. My partner Sarah is autistic and has ADHD. Who knows what the heck my two kids are. I'm surrounded by neurospicy humans and this has led to my primary passion in life, which is figuring out how to customize meditation and mental / emotional / spiritual practices for different nervous systems.
+      </p>
+
+      <p>
+        Next July 2026 I'm finally gonna put some of these ideas into practice with my first annual retreat for neurodivergent humans. There will be meditation, that's definitely part of it, although one of the things you'll learn is there's a lot of variety possible here. And there will be other kinds of creative practices too, from movement to art to simply sharing best strategies for getting through this strange and hard and beautiful life.
+      </p>
+
+      <p>
+        Joining me will be meditation teacher and poet / performer <a href="https://bornimusic.com/" target="_blank"> Orfosu Jones-Quartey</a>, who has learned much about practice through working with his OCD. Rachel and Maty will be in support, along with a neurodivergent-affirming psychotherapist.
+      </p>
+
+      <p><strong>Location:</strong><a href="https://www.artofliving.org/us-en" target="_blank"> Art of the Living Retreat Center, Boone, North Carolina</a><br/>
+      <strong>Dates:</strong> July 16 - 19, 2026</p>
+
+      <p>
+        We are only taking 40 people. If you're interested, we will soon be taking applications. Plug your email address in here to get on our list, and stay tuned to this page for more details!
+      </p>
+    </section>
+
+    <!-- Signup Form Section -->
+    <form
+      id="interest-form"
+      action="https://docs.google.com/forms/d/e/1FAIpQLSeLLfABGI0extFNIXnA0C3QOdkRe-rmNXfJtI0iLkfG1uUnyg/formResponse"
+      method="POST"
+      onsubmit="return submitForm(event)"
+    >
+      <label for="name">Full Name</label>
+      <input type="text" name="entry.452992133" id="name" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" name="entry.1316161745" id="email" required />
+
+      <label>
+        <input type="checkbox" id="consent" required />
+        I agree to be contacted about Neurospicy Retreats and related updates.
+      </label>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- Thank You Message Section -->
+    <div id="thank-you">
+      <h2>🎉 Thank you!</h2>
+      <p>We’ve received your details and will be in touch soon.</p>
+    </div>
+
+    <!-- More Details Section -->
+    <div class="more-details">
+      <em>More details about our upcoming retreat will appear here soon.</em>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    &copy; 2025 Neurospicy Retreats<br/>
+    <a href="https://www.instagram.com/neurospicyretreats/" target="_blank">Instagram</a> | <a href="https://x.com/nspicyretreats" target="_blank">X</a> | <a href="https://bsky.app/profile/neurospicyretreats.bsky.social" target="_blank">Bluesky</a>
+  </footer>
+
+  <script>
+    function validateForm() {
+      const consent = document.getElementById('consent');
+      if (!consent.checked) {
+        alert('Please check the consent box before submitting.');
+        return false;
+      }
+      return true;
+    }
+
+    function submitForm(event) {
+      event.preventDefault();
+
+      if (!validateForm()) return false;
+
+      const form = document.getElementById('interest-form');
+      const data = new FormData(form);
+
+      fetch(form.action, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: data
+      }).then(() => {
+        form.style.display = 'none';
+        document.getElementById('thank-you').style.display = 'block';
+      }).catch((error) => {
+        alert("Something went wrong. Please try again later.");
+        console.error(error);
+      });
+
+      return false;
+    }
+  </script>
+</body>
+</html>
